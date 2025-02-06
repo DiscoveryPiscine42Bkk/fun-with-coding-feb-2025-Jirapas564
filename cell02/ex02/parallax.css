@@ -1,0 +1,44 @@
+body, h1, p, div {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.parallax1 {
+    background-image: url('luna.jpg');
+}
+
+.parallax2 {
+    background-image: url('mud.jpg');
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 0.3rem;
+    font-weight: 200;
+}
+
+.black-block {
+    background-color: black;
+    color: white;
+    position: relative;
+    height: 25vh;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 200;
+}
