@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{ display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0
+}
+
+form{display:flex;
+     gap:10px}
+
+input[type="text"]{width:50px}
+</style>
+</head>
+<body>
+<form id="calc">
+<input type="text" id="left" required>
+<select id="op">
+    
+<option>+</option>
+<option>-</option>
+<option>*</option>
+<option>/</option>
+<option>%</option>
+
+</select>
+<input type="text" id="right" required>
+<input type="submit" value="Try me!">
+</form>
+
+<script>
+setInterval(()=>alert('Please, use me...'),30000);
+document.getElementById('calc').onsubmit=e=>{
+e.preventDefault();
+let l=parseInt(document.getElementById('left').value),
+    r=parseInt(document.getElementById('right').value),
+    op=document.getElementById('op').value;
+if(isNaN(l)||isNaN(r)||l<0||r<0)return alert('Error :(');
+if((op=='/'||op=='%')&&r==0)return alert("It's over 9000!");
+let res=eval(l+op+r);
+console.log(res);
+alert(res);
+};
+</script>
+</body>
+</html>
